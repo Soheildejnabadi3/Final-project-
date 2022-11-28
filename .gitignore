@@ -24,4 +24,4 @@ yarn-error.log*
 
 # ignore vscode files and package-lock.json
 /.vscode
-package-lock.json
+/package-lock.json
