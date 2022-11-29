@@ -22,6 +22,5 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-#ignore vscode files
-.vscode
+#ignore vscode files and MISC
 package-lock.json
