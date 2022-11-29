@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# ignore vscode files and package-lock.json
+/.vscode
+/package-lock.json
