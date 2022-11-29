@@ -2,6 +2,10 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## For Travis
+
+Clone this project from Github and start the react app with the command npm install then npm start
+
 ## Available Scripts
 
 In the project directory, you can run:
