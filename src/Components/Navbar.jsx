@@ -1,5 +1,5 @@
 import React,{useState} from 'react';
-import {Link} from 'react-scroll';
+import { Link } from "react-router-dom";
 import logo from '../images/logo2.png';
 
 function Navbar() {
@@ -27,10 +27,10 @@ function Navbar() {
         <span className='nav-icon'></span>
       </label>
       <ul className='menu'>
-        <li><Link to="#">Home</Link></li>
-        <li><Link to="#">Reserve a Table</Link></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="reserve">Reserve a Table</Link></li>
         <li><Link to="#">Register</Link></li>
-        <li><Link to="#">Log in</Link></li>
+        <li><Link to="log-in">Log in</Link></li>
         
 
       </ul>

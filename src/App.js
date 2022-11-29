@@ -3,8 +3,10 @@ import './App.css';
 import Navbar from "./Components/Navbar";
 import Header from "./Components/Header";
 import Products from './Components/Products';
+import Home from './Pages/Home';
 import {css} from "@emotion/react";
 import ClockLoader from 'react-spinners/ClockLoader';
+import Login from "./Pages/Login";
 
 function App() {
 
@@ -29,9 +31,10 @@ function App() {
         loading ? <ClockLoader color={"#926e5a"} Loading={loading} css={override} size={40}/>
         :
         <>
-        <Navbar/>
-        <Header/>
-        <Products/>
+          <Navbar/>
+          <Header/>
+          <Products/>
+           
         </>
       }
       
