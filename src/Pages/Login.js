@@ -11,7 +11,7 @@ function Login() {
 
       <label for = "psw"><b>Password</b></label>
       <input type = "password" placeholder="Enter Password" name = "psw" required></input>
-
+      <br></br>
       <button type="submit">Click to Login</button>
       
     </div>
