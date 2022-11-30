@@ -9,7 +9,9 @@ function Productbox(props) {
         
         <div className='a-b-text'>
             <h2> {props.title} </h2>
-            <button className='productbox-button'>Reserve a Table</button>
+            <div className='productbox-button'>
+              <a href='reserve' className='productbox-button'>Reserve a Table</a>
+            </div>
         </div>
     </div>
   )
