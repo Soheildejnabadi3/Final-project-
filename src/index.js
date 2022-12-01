@@ -14,6 +14,7 @@ import Register from './Pages/Register';
 import './style.scss';
 
 export {Login} from './Pages/Login';
+export { Register } from './Pages/Register';
 
 
 const router = createBrowserRouter([
