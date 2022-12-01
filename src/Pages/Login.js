@@ -1,51 +1,62 @@
-import React, { useState } from "react";
 import Navbar from '../Components/Navbar';
-import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import "./Login.css";
+import axios from "axios"
+import { useState } from 'react';
 
-export default function Login() {
-    const [email, setEmail] = useState("");
+export default function Login(){
 
-    const [password, setPassword] = useState("");
+  const [inputs, setInputs] = useState({})
 
-function validateForm() {
-    return email.length > 0 && password.length > 0;
-}
+  const handleChange = (event) =>{
+    const name = event.target.name;
+    const value = event.target.value;
+    setInputs(values => ({...values,[name]:value}))
+  }
 
-function handleSubmit(event) {
+  const handleSubmit = (event) =>{
     event.preventDefault();
-}
-return (
-    <div className="Login">
-    <Navbar/>
-    <Form onSubmit={handleSubmit}>
 
-    <Form.Group size="lg" controlId="email">
+    console.log(inputs);
+  }
+  return(
+    <div>
+      <Navbar/>
+      <h1>Login Page</h1>
+      <form onSubmit={handleSubmit}>
+        <table cellSpacing="10">
+          <tbody>
+            <tr>
+              <th>
+              <label>UserName: </label>
+              </th>
+              <td>
+              <input type="text" name="name" onChange={handleChange} />
+              </td>
+            </tr>
 
-    <Form.Label>Email</Form.Label>
 
-    <Form.Control autoFocus type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <tr>
+              <th>
+              <label>Password: </label>
+              </th>
+              <td>
+              <input type="password" name="psw" onChange={handleChange}/>
+              </td>
+            </tr>
 
-    </Form.Group>
 
-    <Form.Group size="lg" controlId="password">
+            <tr>
+              <th>
 
-    <Form.Label>Password</Form.Label>
-
-    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
-    </Form.Group>
-    <Button block size="lg" type="submit" disabled={!validateForm()}>
-    Login
-    </Button>
-    <br></br>
-    <br></br>
-    <sp>
-    First time?
-    <button>Click here to sign up</button>
-    </sp>
-    
-    </Form>
+              </th>
+              <td colSpan="2" align="right">
+              <button>Login</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+       
+      </form>
     </div>
-);
+  )
 }
