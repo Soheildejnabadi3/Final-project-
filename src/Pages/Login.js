@@ -15,12 +15,13 @@ export default function Login(){
 
   const handleSubmit = (event) =>{
     event.preventDefault();
-
+    axios.post('http://localhost:8080/api/user/login', inputs)
     console.log(inputs);
   }
   return(
     <div>
       <Navbar/>
+      <div className='login'>
       <h1>Login Page</h1>
       <form onSubmit={handleSubmit}>
         <table cellSpacing="10">
@@ -57,6 +58,7 @@ export default function Login(){
         </table>
        
       </form>
+      </div>
     </div>
   )
 }
