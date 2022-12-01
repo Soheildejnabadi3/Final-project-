@@ -11,6 +11,9 @@ import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Reservation from './Pages/Reservation';
 import Register from './Pages/Register';
+import './style.scss';
+
+export {Login} from './Pages/Login';
 
 
 const router = createBrowserRouter([
