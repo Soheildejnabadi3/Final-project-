@@ -1,27 +1,44 @@
-import React from 'react';
+import React, { useState } from "react";
 import Navbar from '../Components/Navbar';
-function Login() {
-  return (
-    
-    <div>
-      <Navbar/>
-      <div>
-      <h1 className='Log-in'>Log In</h1>
-      <form action="process-inc.php" method="post">
-      <label for = "userName"><b>Username</b></label>
-      <input type = "text" placeholder="Enter Username" name = "userName" required></input>
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+import "./Login.css";
 
-      <label for = "psw"><b>Password</b></label>
-      <input type = "password" placeholder="Enter Password" name = "psw" required></input>
-      <br></br>
-      <button>Click to Login</button>
-      </form>
-      </div>
+export default function Login() {
+    const [email, setEmail] = useState("");
 
-    
-    </div>
-    
-  )
+    const [password, setPassword] = useState("");
+
+function validateForm() {
+    return email.length > 0 && password.length > 0;
 }
 
-export default Login;
+function handleSubmit(event) {
+    event.preventDefault();
+}
+return (
+    <div className="Login">
+    <Navbar/>
+    <Form onSubmit={handleSubmit}>
+
+    <Form.Group size="lg" controlId="email">
+
+    <Form.Label>Email</Form.Label>
+
+    <Form.Control autoFocus type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+
+    </Form.Group>
+
+    <Form.Group size="lg" controlId="password">
+
+    <Form.Label>Password</Form.Label>
+
+    <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+    </Form.Group>
+    <Button block size="lg" type="submit" disabled={!validateForm()}>
+    Login
+    </Button>
+    </Form>
+    </div>
+);
+}
