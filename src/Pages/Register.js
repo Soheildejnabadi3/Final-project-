@@ -1,9 +1,9 @@
 import Navbar from '../Components/Navbar';
-import "./Login.css";
+import "./Register.css";
 import axios from "axios"
 import { useState } from 'react';
 
-export default function Login(){
+export default function Register(){
 
   const [inputs, setInputs] = useState({})
 
@@ -22,7 +22,7 @@ export default function Login(){
     <div>
       <Navbar/>
       <div className='login'>
-      <h1>Login Page</h1>
+      <h1>Signup Page</h1>
       <form onSubmit={handleSubmit}>
         <table cellSpacing="10">
           <tbody>
@@ -51,7 +51,7 @@ export default function Login(){
 
               </th>
               <td colSpan="2" align="right">
-              <button>Login</button>
+              <button>Sign Up</button>
               </td>
             </tr>
           </tbody>
