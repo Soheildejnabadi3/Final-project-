@@ -25,7 +25,7 @@ return (
 
     <Form.Label>Email</Form.Label>
 
-    <Form.Control autoFocus type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+    <Form.Control autoFocus type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)}/>
 
     </Form.Group>
 
@@ -33,11 +33,18 @@ return (
 
     <Form.Label>Password</Form.Label>
 
-    <Form.Control type="password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+    <Form.Control type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)}/>
     </Form.Group>
     <Button block size="lg" type="submit" disabled={!validateForm()}>
     Login
     </Button>
+    <br></br>
+    <br></br>
+    <sp>
+    First time?
+    <button>Click here to sign up</button>
+    </sp>
+    
     </Form>
     </div>
 );
