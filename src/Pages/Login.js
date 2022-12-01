@@ -15,7 +15,7 @@ export default function Login(){
 
   const handleSubmit = (event) =>{
     event.preventDefault();
-    axios.post('http://localhost:8080/api/user/login', inputs)
+    axios.post('http://localhost:80/api/user/save', inputs)
     console.log(inputs);
   }
   return(
